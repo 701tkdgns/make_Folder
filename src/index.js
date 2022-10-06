@@ -1,5 +1,5 @@
-import { createRoot } from 'react-dom/client'
+import {createRoot} from 'react-dom/client'
 import App from './App.js'
 
 const container = document.getElementById("root")
-createRoot(container).render(<App tab="home" />)
+createRoot(container).render(<App to="home"/>)

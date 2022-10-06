@@ -1,0 +1,104 @@
+.signUp {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(120deg, #fff, #666);
+}
+
+.signUp-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+}
+
+.signUp-container h1 {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.4);
+}
+
+.signUp-container form {
+    padding: 0 40px;
+}
+
+.signUp__form--id,
+.signUp__form--password,
+.signUp__form--password-check,
+.signUp__form--license {
+    position: relative;
+    margin: 30px auto;
+}
+
+.signUp__form--id label,
+.signUp__form--password label,
+.signUp__form--password-check label,
+.signUp__form--license label{
+    margin-left: 5px;
+}
+
+.signUp__form--id input,
+.signUp__form--password input,
+.signUp__form--password-check input,
+.signUp__form--license input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    border: none;
+    background: none;
+    outline: none;
+    border: 2px solid #adadad;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+
+.signUp__form--footer{
+    display: flex;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.signUp__form--footer-back{
+    flex: 1;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    padding-bottom: 10px;
+    transition: .5s all ease;
+}
+
+.signUp__form--footer-back a{
+    text-decoration: none;
+    color: #333;
+}
+
+.signUp__form--footer-back:hover{
+    transform: translateX(-2px);
+}
+
+.signUp__form--footer-button{
+    flex: 1;
+}
+
+.signUp__form--footer-button input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 25px;
+    background: #333;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    margin: 10px auto;
+}
+
+.signUp__form--footer-button input[type="submit"]:hover {
+    border-color: #333;
+}

@@ -1,0 +1,52 @@
+.navigation{
+    width: 100%;
+    background: #222;
+    height: 50px;
+    display: flex;
+}
+
+.navigation-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation-container .navigation__logo a{
+    font-size: 25px;
+    text-decoration: unset;
+    color: #FFF;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.navigation__list{
+    display: flex;
+    align-items: center;
+    color: #FFF;
+}
+
+.navigation__list li{
+    list-style: none;
+    margin: auto 5px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navigation__list li{
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation__list li i {
+    cursor: pointer;
+    display: block;
+}
+
+
+@media screen and (min-width:1200px) {
+    .navigation__list li i {
+        display: none;
+    }
+}
