@@ -4,7 +4,7 @@ const Tree = ({ trees }) => {
     const [childVisible, setChildVisiblity] = useState(false);
     const hasChild = trees.childNode ? true : false;
     return (
-        <div style={{ display: "block", color: "#fff", "paddingLeft": "5px" }}>
+        <div style={{ display: "block", cursor:"pointer" , color: "#fff", "paddingLeft": "5px" }}>
             <div onClick={(e) => setChildVisiblity((v) => !v)}>
                 {trees.commandPartName}
             </div>
@@ -24,31 +24,25 @@ const Tree = ({ trees }) => {
 
 const TreeNode = ({ node = [] }) => {
     const [childVisible, setChildVisiblity] = useState(false);
-    const hasChild = node.childNode ? true : false;
+    const hasChild = node.childNode.length > 0 ? true : false;
 
     const checknode = () => {
         setChildVisiblity((v) => !v)
 
         if (!hasChild) {
-
             const commandText = document.querySelector(".command__text");
-            commandText.value = node.commandFullName;
+            
+            if (commandText.value === "" ){
+                commandText.value = node.commandFullName
+            } else{
+                commandText.value += " " + node.commandPartName
+            }
 
-
-            // window.addEventListener((e) => {
-            //     e.preventDefault();
-            //     const commandText = document.querySelector(".command__text");
-            //     if (commandText.value === "") {
-            //         commandText.value = node.commandFullName;
-            //     } else {
-            //         commandText.value += node.commandPartName;
-            //     }
-            // })
         }
     }
 
     return (
-        <li style={{ display: "block", "paddingLeft": "5px" }}>
+        <li style={{ display: "block", "paddingLeft": "5px", cursor:"pointer" }}>
             <div onClick={checknode}>
                 {node.commandPartName}  
             </div>
